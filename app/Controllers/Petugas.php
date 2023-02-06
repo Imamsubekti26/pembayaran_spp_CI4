@@ -55,7 +55,6 @@ class Petugas extends BaseController
         $request = \Config\Services::request();
         $getData = $request->getPost();
 
-        dd($getData['nama_petugas']);
         $petugasModel = new PetugasModel();
         $petugas = $petugasModel->insert($getData);
 

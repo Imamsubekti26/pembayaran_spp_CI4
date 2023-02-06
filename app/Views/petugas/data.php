@@ -36,7 +36,7 @@
       <td><?= $value['nomor']?></td>
       <td><?= $value['id_petugas']?></td>
       <td><?= $value['nama_petugas']?></td>
-      <td><?= $value['level']?></td>
+      <td><?= $value['username']?></td>
       <td>
         <a href="<?= base_url('petugas/edit/'."/".$value['id_petugas'])?>">
             <button class="button is-primary has-tooltip-bottom is-small" data-tooltip="Edit/Hapus siswa">e</button>
