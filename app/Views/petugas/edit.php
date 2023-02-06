@@ -51,7 +51,7 @@
       <input type="submit" value="simpan perubahan" class="button is-primary is-fullwidth">
     </div>
     <div class="field column is-one-fifth">
-      <a href="<?= base_url("petugas/hapus"."/".$id) ?>">
+      <a href="<?= base_url("petugas/hapus"."/".$id) ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?');">
         <input type="button" class="button is-danger is-fullwidth" value="hapus data">
       </a>
     </div>
