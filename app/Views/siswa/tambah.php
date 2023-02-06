@@ -9,13 +9,13 @@
     <div class="field column">
       <label class="label">NISN</label>
       <div class="control">
-        <input class="input" type="text" placeholder="misal: 0011348937" name="nisn">
+        <input class="input" type="text" placeholder="misal: 0011348937" name="nisn" value="<?= old('nisn') ?>">
       </div>
     </div>
     <div class="field column">
       <label class="label">NIS</label>
       <div class="control">
-        <input class="input" type="text" placeholder="misal: 2213" name="nis">
+        <input class="input" type="text" placeholder="misal: 2213" name="nis" value="<?= old('nis') ?>">
       </div>
     </div>
     <div class="field column">
@@ -33,20 +33,20 @@
   <div class="field">
     <label class="label">Nama</label>
     <div class="control">
-      <input class="input" type="text" placeholder="misal: Dika Hermansyah M." name="nama">
+      <input class="input" type="text" placeholder="misal: Dika Hermansyah M." name="nama"  value="<?= old('nama') ?>">
     </div>
   </div>
   <div class="columns">
     <div class="field column">
       <label class="label">Alamat</label>
       <div class="control">
-        <input class="input" type="text" placeholder="format: dusun, desa, kecamatan, kabupaten" name="alamat">
+        <input class="input" type="text" placeholder="format: dusun, desa, kecamatan, kabupaten" name="alamat" value="<?= old('alamat') ?>">
       </div>
     </div>
     <div class="field column is-one-third">
       <label class="label">No. Telpon</label>
       <div class="control">
-        <input class="input" type="text" placeholder="misal: 08342..." name="no_telp">
+        <input class="input" type="text" placeholder="misal: 08342..." name="no_telp" value="<?= old('no_telp') ?>">
       </div>
     </div>
   </div>

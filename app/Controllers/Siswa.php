@@ -123,7 +123,7 @@ class Siswa extends BaseController
         
         $siswaModel = new SiswaModel();
         if($siswaModel->find($getData['nisn']) != null){
-            return redirect()->back()->with('pesan', 'maaf, data dengan nisn tertera sudah ada');
+            return redirect()->back()->with('pesan', 'maaf, data dengan nisn tertera sudah ada')->withInput();
         }
         $data = $siswaModel->insert($getData); 
 
