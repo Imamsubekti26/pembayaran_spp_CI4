@@ -64,7 +64,7 @@ $routes->get('/spp/hapus/(:num)', 'Spp::aksiHapus/$1');
 
 // $routes->get('/pembayaran', 'Spp::index');
 $routes->get('/pembayaran/(:num)', 'Pembayaran::halamanBayar/$1');
-// $routes->get('/pembayaran/tambah', 'Spp::halamanTambah');
+$routes->post('/pembayaran/tambah', 'Pembayaran::halamanTambah');
 // $routes->get('/pembayaran/edit/(:num)', 'Spp::halamanEdit/$1');
 // $routes->post('/pembayaran/tambah', 'Spp::aksiTambah');
 // $routes->post('/pembayaran/edit/(:num)', 'Spp::aksiEdit/$1');

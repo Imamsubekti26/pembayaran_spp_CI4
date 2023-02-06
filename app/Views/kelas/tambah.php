@@ -29,8 +29,6 @@
     <button class="button is-primary is-fullwidth">simpan</button>
   </div>
 </form>
-  
-</div>
 
 <?php if($flash) :?>
 <script>alert("<?= $flash?>")</script>

@@ -11,6 +11,7 @@
     <div class="control">
       <form action="<?= base_url('pembayaran/tambah')?>" method="POST">
         <input type="hidden" name="id" value="<?= $id ?>">
+        <input type="hidden" name="siswa" value="<?= $siswa['nama'] ?>">
         <button class="button is-link">Tambah data</button>
       </form>
     </div>

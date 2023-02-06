@@ -51,4 +51,18 @@ class Pembayaran extends BaseController
   {
       
   }
+  public function halamanTambah()
+  {
+    $session = \Config\Services::session();
+    $getFlash = $session->getFlashdata('pesan')??false;
+
+    $request = \Config\Services::request();
+    $getData = $request->getPost();
+
+    $data = [
+      "siswa" => ["nama" => $getData['siswa']],
+      'flash' => $getFlash,
+    ];
+    return view('pembayaran/tambah', $data);
+  }
 }
