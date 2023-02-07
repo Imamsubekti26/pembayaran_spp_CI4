@@ -33,6 +33,7 @@ $routes->get('/', 'Login::index');
 
 $routes->get('/login', 'Login::index');
 $routes->get('/logout', 'Login::logout');
+$routes->post('/login', 'Login::tryLogin');
 
 $routes->get('/siswa', 'Siswa::index');
 $routes->get('/siswa/tambah', 'Siswa::halamanTambah');
