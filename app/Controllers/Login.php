@@ -10,6 +10,10 @@ class Login extends BaseController
     {
         $session = \Config\Services::session();
         $getFlash = $session->getFlashdata('pesan')??false;
+        
+        if($session->get('status')){
+            return redirect()->to(base_url('siswa'));
+        }
 
         $data = [
             "flash" => $getFlash
@@ -67,5 +71,12 @@ class Login extends BaseController
         ];
         $session->set($session_data);
         return redirect()->to(base_url('siswa'));
+    }
+    public function logout()
+    {
+        $session = \Config\Services::session();
+        $session->remove(['status', 'id', 'level']);
+
+        return redirect()->to(base_url('login'));
     }
 }

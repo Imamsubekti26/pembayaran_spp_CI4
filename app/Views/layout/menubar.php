@@ -19,7 +19,7 @@
     <p class="menu-label">Pengaturan</p>
     <ul class="menu-list">
       <li><a href="<?= base_url('')?>">Profil Saya</a></li>
-      <li><a href="<?= base_url('')?>">Keluar</a></li>
+      <li><a href="<?= base_url('logout')?>">Keluar</a></li>
     </ul>
   </aside>
   <div class="column">

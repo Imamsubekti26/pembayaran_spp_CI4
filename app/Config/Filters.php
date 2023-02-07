@@ -8,6 +8,8 @@ use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
+use App\Filters\AdminLogin;
+use App\Filters\PetugasLogin;
 
 class Filters extends BaseConfig
 {
@@ -21,6 +23,8 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'adminLogin'    => AdminLogin::class,
+        'petugasLogin'    => PetugasLogin::class,
     ];
 
     /**
@@ -60,5 +64,8 @@ class Filters extends BaseConfig
      * Example:
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
-    public array $filters = [];
+    public array $filters = [
+        'adminLogin' => ['before' => ['siswa', 'petugas', 'kelas', 'spp', 'pembayaran', 'siswa/*', 'petugas/*', 'kelas/*', 'spp/*', 'pembayaran/*']],
+        'petugasLogin' => ['before' => ['siswa', 'kelas', 'spp', 'pembayaran', 'siswa/*', 'kelas/*', 'spp/*', 'pembayaran/*']],
+    ];
 }
